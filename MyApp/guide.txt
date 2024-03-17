@@ -1,0 +1,8 @@
+Từ vị trí folder gốc (folder mà VScode đang mở)
+
+Kích hoạt môi trường ảo:
+source .venv/bin/activate
+
+Thực thi chương trình:
+cd tên_folder (chứa các folder của chương trình)
+python -m app.main

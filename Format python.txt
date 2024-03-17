@@ -1,0 +1,51 @@
+Kích hoạt môi trường ảo:
+source .venv/bin/activate
+
+Cả flake8 và autopep8 là những công cụ hữu ích khi làm việc với Python, giúp bạn tuân thủ các 
+quy định về phong cách mã và cải thiện chất lượng mã của mình. Dưới đây là một số câu lệnh thường dùng cho mỗi công cụ:
+
+1. Câu Lệnh Thường Dùng cho flake8:
+
+Kiểm tra một file cụ thể:
+flake8 path/to/your_file.py
+
+Kiểm tra tất cả các file trong một thư mục:
+flake8 path/to/your_directory/
+
+Giới hạn số lượng ký tự trên mỗi dòng:
+flake8 --max-line-length=120 path/to/your_file.py
+
+Chỉ định một hoặc nhiều lỗi/warnings để bỏ qua:
+flake8 --ignore=E501,W503 path/to/your_file.py
+
+Chỉ định một hoặc nhiều thư mục để bỏ qua trong quá trình kiểm tra:
+flake8 --exclude=venv/*,build/* path/to/your_directory/
+
+Chạy flake8 với cấu hình tùy chỉnh từ một file:
+Bạn có thể tạo một file cấu hình, thường là .flake8 trong thư mục gốc của dự án, và flake8 sẽ tự động 
+sử dụng cấu hình này khi được chạy.
+
+2. Câu Lệnh Thường Dùng cho autopep8:
+
+Định dạng một file cụ thể và in kết quả ra stdout:
+autopep8 path/to/your_file.py
+
+Định dạng và ghi đè lên file gốc:
+autopep8 --in-place path/to/your_file.py
+
+Định dạng một file với chiều dài dòng tùy chỉnh:
+autopep8 --max-line-length=120 --in-place path/to/your_file.py
+
+Chạy autopep8 trên tất cả các file Python trong một thư mục (đệ quy):
+autopep8 --in-place --recursive path/to/your_directory/
+
+Ghi kết quả định dạng vào một file mới thay vì ghi đè:
+autopep8 path/to/your_file.py --out-file path/to/new_file.py
+
+Chỉ định các lỗi để tự động sửa:
+Bạn có thể chỉ định autopep8 để chỉ sửa một subset của lỗi. Mặc dù autopep8 thường cố gắng sửa tất cả mọi thứ, nhưng 
+có thể bạn muốn giới hạn việc này trong một số trường hợp.
+
+Lưu ý rằng trong khi flake8 là một công cụ để kiểm tra và báo cáo các vấn đề về phong cách mã, autopep8 
+cung cấp cách tự động sửa chữa nhiều vấn đề đó. 
+Sử dụng kết hợp hai công cụ này sẽ giúp bạn duy trì chất lượng mã và tuân thủ PEP 8.
